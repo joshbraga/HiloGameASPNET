@@ -32,15 +32,6 @@
                 </tr>
             </table>
 
-            <%-- Validator for displaying error message of user input --%>
-            <asp:ValidationSummary 
-                ID="ValidationSummary" 
-                runat="server" 
-                ValidationGroup="getMaxGuessValidationGroup" 
-                DisplayMode="BulletList" 
-                ShowSummary="true"
-                HeaderText="<b>Error:</b> The max guess:"/>
-
             <!-- Validator for checking if the text box is empty -->
             <asp:RequiredFieldValidator 
                 ID = "maxGuessRequiredValidator"
