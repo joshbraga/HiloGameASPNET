@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="default.aspx" />
+    <Content Include="getGameNumbers.aspx" />
     <Content Include="hilo.css" />
     <Content Include="Images\numbersBlue.jpg" />
     <Content Include="Images\numbersIcon.png" />
@@ -71,6 +72,13 @@
     </Compile>
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="getGameNumbers.aspx.cs">
+      <DependentUpon>getGameNumbers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="getGameNumbers.aspx.designer.cs">
+      <DependentUpon>getGameNumbers.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
