@@ -1,6 +1,17 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="getGameNumbers.aspx.cs" Inherits="HiloGameASPNET.getGameNumbers" %>
-
 <!DOCTYPE html>
+
+<!-- 
+FILE          : getGameNumbers.aspx
+PROJECT       : HiloGameASPNET
+PROGRAMMER    : Balazs Karner 8646201 & Josh Braga 5895818
+FIRST VERSION : 11/20/2020
+DESCRIPTION   : 
+    The purpose of this file is to prompt the user for their max guess of the hi lo game
+    and then transfer them to the main game loop aspx page.
+-->
+
+
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">

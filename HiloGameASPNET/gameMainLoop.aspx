@@ -1,6 +1,16 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="gameMainLoop.aspx.cs" Inherits="HiloGameASPNET.gameMainLoop" %>
-
 <!DOCTYPE html>
+
+<!-- 
+FILE          : gameMainLoop.aspx
+PROJECT       : HiloGameASPNET
+PROGRAMMER    : Balazs Karner 8646201 & Josh Braga 5895818
+FIRST VERSION : 11/20/2020
+DESCRIPTION   : 
+    The purpose of this file is to prompt the user for their next guess and transfer 
+    to this page again until the user guesses the winning number. Once the user wins, 
+    the server transfers the user to the game won aspx page.
+-->
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">

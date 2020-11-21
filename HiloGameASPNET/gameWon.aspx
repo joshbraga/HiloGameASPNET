@@ -1,6 +1,16 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="gameWon.aspx.cs" Inherits="HiloGameASPNET.gameWon" %>
-
 <!DOCTYPE html>
+
+<!-- 
+FILE          : gameWon.aspx
+PROJECT       : HiloGameASPNET
+PROGRAMMER    : Balazs Karner 8646201 & Josh Braga 5895818
+FIRST VERSION : 11/20/2020
+DESCRIPTION   : 
+    The purpose of this file is to prompt the user if they would like to play 
+    the Hi-Lo game again. If yes, then the user is transfered to the second 
+    aspx page to enter another max guess, and the current viewstate is reset.
+-->
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
