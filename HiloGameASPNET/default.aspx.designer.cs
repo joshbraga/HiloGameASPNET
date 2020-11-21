@@ -33,6 +33,15 @@ namespace HiloGameASPNET
         protected global::System.Web.UI.WebControls.TextBox getPlayerName;
 
         /// <summary>
+        /// register control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button register;
+
+        /// <summary>
         /// getPlayerNameValidator control.
         /// </summary>
         /// <remarks>

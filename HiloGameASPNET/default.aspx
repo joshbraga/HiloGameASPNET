@@ -7,7 +7,7 @@
     <link rel = "stylesheet" type = "text/css" href = "hilo.css" />
     <title>Assignment 5 Hi-Lo Game</title>
 
-    <link rel = "icon" href = "./Images/numbersIcon.png"></link>
+    <link rel = "icon" href = "./Images/numbersIcon.png" />
 </head>
 <body class = "gameBody">
     <!-- This div encompasses everything (The opaque black box)-->
@@ -25,7 +25,8 @@
                         <asp:TextBox ID="getPlayerName" runat="server" CssClass="textBox"></asp:TextBox>
                     </td>
                     <td>
-                        <input type="submit" id="register" value="Register" class = "orangeButton"/>
+                        <asp:Button ID="register" runat="server" Text="Register" CssClass="orangeButton" OnClick="register_Click" />
+                        <!--<input type="submit" id="register" value="Register" class = "orangeButton"/>-->
                     </td>               
                 </tr>
             </table>
