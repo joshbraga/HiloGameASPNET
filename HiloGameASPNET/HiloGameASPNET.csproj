@@ -58,6 +58,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="default.aspx" />
+    <Content Include="hilo.css" />
+    <Content Include="Images\numbersBlue.jpg" />
+    <Content Include="Images\numbersIcon.png" />
+    <Content Include="Images\numbersRed.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
