@@ -22,7 +22,7 @@
                     <!--<td><input id="getPlayerName" name = "userName" type="text" class = "textBox" placeholder = "eg. John"/></td>-->
                    
                     <td>
-                        <asp:TextBox ID="getPlayerName" runat="server" CssClass="textBox"></asp:TextBox>
+                        <asp:TextBox ID="getPlayerName" runat="server" placeholder="eg. John" CssClass="textBox"></asp:TextBox>
                     </td>
                     <td>
                         <asp:Button ID="register" runat="server" Text="Register" CssClass="orangeButton" OnClick="register_Click" />

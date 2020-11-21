@@ -15,7 +15,6 @@ namespace HiloGameASPNET
         private int userGuess;
         private int target;
         private Boolean userWon = false;
-        private int temp;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -36,7 +35,6 @@ namespace HiloGameASPNET
                     Random r = new Random(DateTime.Now.Millisecond);
                     ViewState[SharedValues.VIEWSTATE_TARGETGUESS] = r.Next(minGuess, maxGuess);
 
-                    Int32.TryParse(ViewState[SharedValues.VIEWSTATE_TARGETGUESS].ToString(), out temp);
                 }
             }
             else
@@ -55,7 +53,7 @@ namespace HiloGameASPNET
                 }
                 else if (!Int32.TryParse(getUserGuess.Text, out userGuess))
                 {
-                    errorText.InnerHtml = "Must be an integer in the specified range";
+                    errorText.InnerHtml = "Input must be an integer in the specified range";
                 }                
                 else
                 {
@@ -63,13 +61,13 @@ namespace HiloGameASPNET
                 }
 
                 getUserGuess.Text = String.Empty;
-
-                Int32.TryParse(ViewState[SharedValues.VIEWSTATE_TARGETGUESS].ToString(), out temp);
+                
+                
             }
 
             
 
-            salutationLabel.Text =  temp + " Hello, " + playerName + ". Your allowable guessing range is any value " +
+            salutationLabel.Text =  "Hello, " + playerName + ". Your allowable guessing range is any value " +
                                     "between " + minGuess + " and " + maxGuess + " inclusive.";
 
         }
