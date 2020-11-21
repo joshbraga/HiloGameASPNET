@@ -28,7 +28,7 @@
             <table>
                 <tr>
                     <td><asp:TextBox runat = "server" ID = "getMaxGuess" Name = "maxGuess" Placeholder = "eg. 1000" class = "textBox"/></td>
-                    <td><asp:Button runat = "server" ID = "next" ValidationGroup="maxGuessValidationGroup" Text = " Next " class = "orangeButton"/></td>                    
+                    <td><asp:Button runat = "server" ID = "next" ValidationGroup="maxGuessValidationGroup" Text = " Next " class = "orangeButton" OnClick="next_Click"/></td>                    
                 </tr>
             </table>
 

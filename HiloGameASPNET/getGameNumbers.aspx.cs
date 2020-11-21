@@ -10,21 +10,29 @@ namespace HiloGameASPNET
     public partial class getGameNumbers : System.Web.UI.Page
     {
         public const int MINGUESS = 1;
+        private string playerName;
+
+
 
         protected void Page_Load(object sender, EventArgs e)
-        {
-            string playerName;
-
-            if (PreviousPage != null && PreviousPageViewState != null)
+        {  
+           if (!IsPostBack)
             {
-                playerName = (string)PreviousPageViewState["vsPlayerName"];
-                
+                if (PreviousPage != null && PreviousPageViewState != null)
+                {
+                    playerName = (string)PreviousPageViewState[SharedValues.viewStatePlayerName];
 
-                ViewState["vsPlayerName"] = playerName;
+
+                    ViewState[SharedValues.viewStatePlayerName] = playerName;
+                }
+                else
+                {
+                    playerName = SharedValues.defaultPlayerName;
+                }
             }
             else
             {
-                playerName = "DEFAULT";
+                playerName = (string)ViewState[SharedValues.viewStatePlayerName];
             }
 
             salutationLabel.Text = "Welcome " + playerName + ". Please enter the maximum guess number below:";
@@ -48,6 +56,17 @@ namespace HiloGameASPNET
                 }
                 return returnValue;
             }
+        }
+
+        protected void next_Click(object sender, EventArgs e)
+        {
+            ViewState[SharedValues.viewStateMaxGuess] = getMaxGuess.Text;
+            Server.Transfer("gameMainLoop.aspx");
+        }
+
+        public StateBag ReturnViewState()
+        {
+            return ViewState;
         }
     }
 }
