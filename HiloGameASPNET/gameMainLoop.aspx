@@ -13,7 +13,7 @@
 
         The following image is free for use with the above attribution
     -->
-    <link rel = "icon" href = "./Images/numbersIcon.png"></link>
+    <link rel = "icon" href = "./Images/numbersIcon.png" />
 </head>
 <body class = "gameBody">
     <div class = "formContainer">
@@ -38,15 +38,6 @@
                 ControlToValidate = "getUserGuess"
                 class = "validator">
             </asp:RequiredFieldValidator>
-
-            <!-- Validator for checking if the user entered a valid value -->
-            <asp:RangeValidator 
-                ID = "userGuessRangeValidator" 
-                runat = "server" 
-                ControlToValidate = "getUserGuess"  
-                Type = "Integer"
-                class = "validator">
-            </asp:RangeValidator>
         </form>
     </div>
 </body>
