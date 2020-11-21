@@ -42,12 +42,12 @@ namespace HiloGameASPNET
         protected global::System.Web.UI.WebControls.Button makeThisGuess;
 
         /// <summary>
-        /// userGuessRequiredValidator control.
+        /// errorText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator userGuessRequiredValidator;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl errorText;
     }
 }

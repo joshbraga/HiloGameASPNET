@@ -31,13 +31,13 @@ namespace HiloGameASPNET
                 if (Page.PreviousPage != null)
                 {
                     Object objPreviousPage = (Object)PreviousPage;
-                    MethodInfo objMethod = objPreviousPage.GetType().GetMethod("ReturnViewState");   `   //System.Reflection class
+                    MethodInfo objMethod = objPreviousPage.GetType().GetMethod("ReturnViewState");      //System.Reflection class
                     return (StateBag)objMethod.Invoke(objPreviousPage, null);
                 }
                 return returnValue;
             }
         }
-        `
+        
         public StateBag ReturnViewState()
         {
             return ViewState;

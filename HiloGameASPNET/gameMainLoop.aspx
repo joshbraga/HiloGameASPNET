@@ -26,18 +26,22 @@
             <!-- Tables contains the text box and the button -->
             <table>
                 <tr>
-                    <td><asp:TextBox runat = "server" ID = "getUserGuess" Placeholder = "eg. 2" class = "textBox"/></td>
+                    <td><asp:TextBox runat = "server" ID = "getUserGuess" class = "textBox"/></td>
                     <td><asp:Button runat = "server" ID = "makeThisGuess" Text = "Make this Guess" class = "orangeButton" OnClick="makeThisGuess_Click"/></td>                    
                 </tr>
             </table>
 
             <!-- Validator for checking if the text box is empty -->
-            <asp:RequiredFieldValidator 
+            
+            <div id="errorText" style="color:red" runat="server">   
+                <%--<asp:RequiredFieldValidator 
                 ID = "userGuessRequiredValidator"
                 runat = "server" 
                 ControlToValidate = "getUserGuess"
-                class = "validator">
-            </asp:RequiredFieldValidator>
+                    ErrorMessage="Input cannot be blank"
+                class = "validator"></asp:RequiredFieldValidator>--%>
+            </div>
+            
         </form>
     </div>
 </body>

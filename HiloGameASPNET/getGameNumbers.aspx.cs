@@ -21,6 +21,7 @@ namespace HiloGameASPNET
                 if (PreviousPage != null && PreviousPageViewState != null)
                 {
                     playerName = (string)PreviousPageViewState[SharedValues.VIEWSTATE_PLAYERNAME];
+                    ViewState[SharedValues.VIEWSTATE_PLAYERNAME] = playerName;
                 }
                 else
                 {
