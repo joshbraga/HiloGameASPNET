@@ -16,21 +16,53 @@
         <link rel = "icon" href = "./Images/numbersIcon.png"></link>
 </head>
 <body class = "gameBody">
-    <div id = "section2" class = "formContainer">
-        <form name="getGameNumbers.asp">
+    <div class = "formContainer">
+        <form name="getGameNumbers" runat = "server">
 
             <h1>Hi-Lo Game!</h1>
 
-            <!-- Gets the user's name from the query string and prints it out in a response when promptng for a max guess -->
-            <p>Welcome INSERT_NAME_HERE. Please enter the maximum guess number below:</p>
+            <!-- Gets the user's name from the query string and prints it out in a response when prompting for a max guess -->
+            <asp:Label ID = "salutationLabel" runat = "server" class="labels"></asp:Label>
 
             <!-- Tables contains the text box and the button -->
             <table>
                 <tr>
-                    <td><input id = "maxGuessBox" name = "maxGuess" placeholder = "eg. 1000" type = "text" class = "textBox" autofocus/></td>
-                    <td><input type="submit" id="next" value=" Next " class = "orangeButton"/></td>                    
+                    <td><asp:TextBox runat = "server" ID = "getMaxGuess" Name = "maxGuess" Placeholder = "eg. 1000" class = "textBox"/></td>
+                    <td><asp:Button runat = "server" ID = "next" ValidationGroup="maxGuessValidationGroup" Text = " Next " OnClick="nextOnClick" class = "orangeButton"/></td>                    
                 </tr>
             </table>
+
+            <!-- Validator for displaying error message of user input -->
+            <asp:ValidationSummary 
+                ID="ValidationSummary" 
+                runat="server" 
+                ValidationGroup="getMaxGuessValidationGroup" 
+                DisplayMode="BulletList" 
+                ShowSummary="true"
+                HeaderText="<b>Error:</b> The max guess:"/>
+
+            <!-- Validator for checking if the text box is empty -->
+            <asp:RequiredFieldValidator 
+                ID = "maxGuessRequiredValidator"
+                runat = "server" 
+                ControlToValidate = "getMaxGuess"
+                ErrorMessage = "Cannot be empty"
+                ValidationGroup="maxGuessValidationGroup"
+                Display="Dynamic"
+                class = "validator">
+            </asp:RequiredFieldValidator>
+
+            <!-- Validator for checking if the user entered a value above 1 -->
+            <asp:RangeValidator 
+                ID = "maxGuessRangeValidator" 
+                runat = "server" 
+                ControlToValidate = "getMaxGuess" 
+                ErrorMessage = "Must be an integer greater than 1"  
+                Type = "Integer"
+                ValidationGroup="maxGuessValidationGroup"
+                Display="Dynamic"
+                class = "validator">
+            </asp:RangeValidator>
         </form>
     </div>
 </body>

@@ -11,7 +11,13 @@ namespace HiloGameASPNET
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            getMaxGuess.Focus();
+            salutationLabel.Text = "Welcome " + ". Please enter the maximum guess number below:";
+        }
 
+        protected void nextOnClick(object sender, EventArgs e)
+        {
+            Server.Transfer("mainGameLoop.aspx");
         }
     }
 }

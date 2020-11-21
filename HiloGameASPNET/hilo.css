@@ -22,13 +22,6 @@ h2 {
     color: White;
 }
 
-p {
-    font-family: Arial;
-    font-size: 16px;
-    text-align: center;
-    color: White;
-}
-
 /*
 * Black Ice. (August, 2018). Blue backround with Text Overlay. Pexels https://www.pexels.com/photo/blue-background-with-text-overlay-1314536/
 * The above is a reference to the background image although it is free to use for commercial, and personal use. it is a free stock photo
@@ -60,6 +53,19 @@ p {
 :-ms-input-placeholder {
     color: DarkGray;
     font-style: italic;
+}
+
+.labels {
+    font-family: Arial;
+    font-size: 16px;
+    text-align: center;
+    color: White;
+}
+
+.validator {
+    font-family: Arial;
+    font-size: 16px;
+    color: Red;
 }
 
 /* The css orangeButton, orangeButton:Hover, and orangeButton:active was created with assistance from:
