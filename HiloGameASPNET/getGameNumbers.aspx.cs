@@ -39,12 +39,15 @@ namespace HiloGameASPNET
          *      void : void
          */
         protected void Page_Load(object sender, EventArgs e)
-        {  
+        {
+            getMaxGuess.Focus();
+
            if (!IsPostBack)
             {
                 if (PreviousPage != null && PreviousPageViewState != null)
                 {
                     playerName = (string)PreviousPageViewState[SharedValues.VIEWSTATE_PLAYERNAME];
+                    ViewState[SharedValues.VIEWSTATE_PLAYERNAME] = playerName;
                 }
                 else
                 {
