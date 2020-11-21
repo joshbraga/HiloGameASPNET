@@ -13,7 +13,7 @@
 
             The following image is free for use with the above attribution
         -->
-        <link rel = "icon" href = "./Images/numbersIcon.png"></link>
+        <link rel = "icon" href = "./Images/numbersIcon.png" />
 </head>
 <body class = "gameBody">
     <div class = "formContainer">
@@ -28,11 +28,11 @@
             <table>
                 <tr>
                     <td><asp:TextBox runat = "server" ID = "getMaxGuess" Name = "maxGuess" Placeholder = "eg. 1000" class = "textBox"/></td>
-                    <td><asp:Button runat = "server" ID = "next" ValidationGroup="maxGuessValidationGroup" Text = " Next " OnClick="nextOnClick" class = "orangeButton"/></td>                    
+                    <td><asp:Button runat = "server" ID = "next" ValidationGroup="maxGuessValidationGroup" Text = " Next " class = "orangeButton"/></td>                    
                 </tr>
             </table>
 
-            <!-- Validator for displaying error message of user input -->
+            <%-- Validator for displaying error message of user input --%>
             <asp:ValidationSummary 
                 ID="ValidationSummary" 
                 runat="server" 
@@ -57,7 +57,6 @@
                 ID = "maxGuessRangeValidator" 
                 runat = "server" 
                 ControlToValidate = "getMaxGuess" 
-                ErrorMessage = "Must be an integer greater than 1"  
                 Type = "Integer"
                 ValidationGroup="maxGuessValidationGroup"
                 Display="Dynamic"

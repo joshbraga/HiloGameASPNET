@@ -27,9 +27,11 @@ namespace HiloGameASPNET
                 playerName = "DEFAULT";
             }
 
-            welcomeMessage.InnerHtml = "Welcome " + playerName + ". Please enter the maximum guess number below:";
+            salutationLabel.Text = "Welcome " + playerName + ". Please enter the maximum guess number below:";
 
-            maxGuessBoxRangeValidator.MinimumValue = MINGUESS.ToString();
+            maxGuessRangeValidator.MinimumValue = MINGUESS.ToString();
+            maxGuessRangeValidator.MaximumValue = Int32.MaxValue.ToString();
+            maxGuessRangeValidator.ErrorMessage = "Must be an integer greater than " + MINGUESS;
         }
 
 
