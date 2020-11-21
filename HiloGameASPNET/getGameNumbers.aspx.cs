@@ -20,26 +20,26 @@ namespace HiloGameASPNET
             {
                 if (PreviousPage != null && PreviousPageViewState != null)
                 {
-                    playerName = (string)PreviousPageViewState[SharedValues.viewStatePlayerName];
+                    playerName = (string)PreviousPageViewState[SharedValues.VIEWSTATE_PLAYERNAME];
 
 
-                    ViewState[SharedValues.viewStatePlayerName] = playerName;
+                    ViewState[SharedValues.VIEWSTATE_PLAYERNAME] = playerName;
                 }
                 else
                 {
-                    playerName = SharedValues.defaultPlayerName;
+                    playerName = SharedValues.DEFAULT_PLAYERNAME;
                 }
             }
             else
             {
-                playerName = (string)ViewState[SharedValues.viewStatePlayerName];
+                playerName = (string)ViewState[SharedValues.VIEWSTATE_PLAYERNAME];
             }
 
             salutationLabel.Text = "Welcome " + playerName + ". Please enter the maximum guess number below:";
 
-            maxGuessRangeValidator.MinimumValue = MINGUESS.ToString();
-            maxGuessRangeValidator.MaximumValue = Int32.MaxValue.ToString();
-            maxGuessRangeValidator.ErrorMessage = "Must be an integer greater than " + MINGUESS;
+            maxGuessRangeValidator.MinimumValue = SharedValues.DEFAULT_MINGUESS.ToString();
+            maxGuessRangeValidator.MaximumValue = SharedValues.DEFAULT_MAXGUESS.ToString();
+            maxGuessRangeValidator.ErrorMessage = "Must be an integer greater than " + SharedValues.DEFAULT_MINGUESS;
         }
 
 
@@ -60,7 +60,7 @@ namespace HiloGameASPNET
 
         protected void next_Click(object sender, EventArgs e)
         {
-            ViewState[SharedValues.viewStateMaxGuess] = getMaxGuess.Text;
+            ViewState[SharedValues.VIEWSTATE_MAXGUESS] = getMaxGuess.Text;
             Server.Transfer("gameMainLoop.aspx");
         }
 
