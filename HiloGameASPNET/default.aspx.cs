@@ -17,7 +17,7 @@ namespace HiloGameASPNET
 
         protected void register_Click(object sender, EventArgs e)
         {
-            ViewState[SharedValues.viewStatePlayerName] = getPlayerName.Text;
+            ViewState[SharedValues.VIEWSTATE_PLAYERNAME] = getPlayerName.Text;
             Server.Transfer("getGameNumbers.aspx");
         }
 
