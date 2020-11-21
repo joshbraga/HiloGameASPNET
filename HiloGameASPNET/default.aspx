@@ -16,7 +16,7 @@
 
         <!-- Form prompts user for their name, and submits as long as it is not empty -->
         <form id="form1" runat="server">
-            <p>Please enter your name:</p>           
+            <p class="labels">Please enter your name:</p>            
             <table>
                 <tr>                    
                     <!--<td><input id="getPlayerName" name = "userName" type="text" class = "textBox" placeholder = "eg. John"/></td>-->
