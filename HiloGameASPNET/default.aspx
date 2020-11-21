@@ -9,7 +9,7 @@
 
     <link rel = "icon" href = "./Images/numbersIcon.png"></link>
 </head>
-<body>
+<body class = "gameBody">
     <!-- This div encompasses everything (The opaque black box)-->
     <div id="section1" class = "formContainer">
         <h1>Hi-Lo Game!</h1>        
