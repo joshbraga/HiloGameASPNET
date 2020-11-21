@@ -15,15 +15,26 @@
         <h1>Hi-Lo Game!</h1>        
 
         <!-- Form prompts user for their name, and submits as long as it is not empty -->
-        <form name="hiloStart.html">
+        <form id="form1" runat="server">
             <p>Please enter your name:</p>           
             <table>
                 <tr>                    
-                    <td><input id="getPlayerName" name = "userName" type="text" class = "textBox" placeholder = "eg. John"/></td>
-                    <td><input type="submit" id="register" value="Register" class = "orangeButton"/></td>                    
+                    <!--<td><input id="getPlayerName" name = "userName" type="text" class = "textBox" placeholder = "eg. John"/></td>-->
+                   
+                    <td>
+                        <asp:TextBox ID="getPlayerName" runat="server" CssClass="textBox"></asp:TextBox>
+                    </td>
+                    <td>
+                        <input type="submit" id="register" value="Register" class = "orangeButton"/>
+                    </td>               
                 </tr>
             </table>
-            <div id="nameError" style="color:red"></div> 
+            <div id="nameError" style="color:red">
+                <asp:RequiredFieldValidator ID="getPlayerNameValidator"
+                        runat="server" ControlToValidate="getPlayerName"
+                        ErrorMessage="Sorry this is a required field">
+                    </asp:RequiredFieldValidator>
+            </div> 
         </form>
     </div>
 </body>
