@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <link rel = "stylesheet" type = "text/css" href = "hilo.css" />
-    <title>Assignment 4 Hi-Lo Game</title>
+    <title>Assignment 5 Hi-Lo Game</title>
 
     <!-- 
         REFERENCE: 
@@ -27,25 +27,15 @@
             <table>
                 <tr>
                     <td><asp:TextBox runat = "server" ID = "getUserGuess" Placeholder = "eg. 2" class = "textBox"/></td>
-                    <td><asp:Button runat = "server" ID = "makeThisGuess" ValidationGroup="userGuessValidationGroup" Text = "Make this Guess!" class = "orangeButton"/></td>                    
+                    <td><asp:Button runat = "server" ID = "makeThisGuess" Text = "Make this Guess" class = "orangeButton"/></td>                    
                 </tr>
             </table>
-
-            <!-- Validator for displaying error message of user input -->
-            <asp:ValidationSummary 
-                ID="ValidationSummary" 
-                runat="server" 
-                ValidationGroup="getUserGuessValidationGroup" 
-                DisplayMode="BulletList" 
-                ShowSummary="true"
-                HeaderText="<b>Error:</b>"/>
 
             <!-- Validator for checking if the text box is empty -->
             <asp:RequiredFieldValidator 
                 ID = "userGuessRequiredValidator"
                 runat = "server" 
                 ControlToValidate = "getUserGuess"
-                ValidationGroup="getUserGuessValidationGroup"
                 class = "validator">
             </asp:RequiredFieldValidator>
 
@@ -55,7 +45,6 @@
                 runat = "server" 
                 ControlToValidate = "getUserGuess"  
                 Type = "Integer"
-                ValidationGroup="getUserGuessValidationGroup"
                 class = "validator">
             </asp:RangeValidator>
         </form>
