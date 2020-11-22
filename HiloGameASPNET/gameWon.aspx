@@ -12,6 +12,8 @@ DESCRIPTION   :
     aspx page to enter another max guess, and the current viewstate is reset.
 -->
 
+
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <link rel = "stylesheet" type = "text/css" href = "hilo.css" />
@@ -32,11 +34,10 @@ DESCRIPTION   :
             <!-- Prompts user if they would like to play the game again -->
             <h1>You Win!!</h1>
             <h2>You guessed the right number!!</h2>
-            <table>
-                <tr>
-                    <td><asp:Button runat = "server" ID = "playAgain" Text = "Play Again" OnClick="playAgainOnClick" class = "orangeButton"/></td>                    
-                </tr>
-            </table>
+
+            <div align ="center">
+                <asp:Button runat = "server" ID = "playAgain" Text = "Play Again" OnClick="playAgainOnClick" class = "orangeButton"/> 
+            </div>                   
         </form>
     </div>
 </body>
