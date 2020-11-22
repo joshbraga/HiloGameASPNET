@@ -43,16 +43,8 @@ DESCRIPTION   :
                 </tr>
             </table>
 
-            <!-- Validator for checking if the text box is empty -->
-            
-            <div id="errorText" style="color:red" runat="server" class="validator">   
-                <%--<asp:RequiredFieldValidator 
-                ID = "userGuessRequiredValidator"
-                runat = "server" 
-                ControlToValidate = "getUserGuess"
-                    ErrorMessage="Input cannot be blank"
-                class = "validator"></asp:RequiredFieldValidator>--%>
-            </div>
+            <!-- div to contain potential error text from server side processing -->            
+            <div id="errorText" style="color:red" runat="server" class="validator"></div>
             
         </form>
     </div>
