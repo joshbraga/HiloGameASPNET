@@ -45,7 +45,7 @@ DESCRIPTION   :
 
             <!-- Validator for checking if the text box is empty -->
             
-            <div id="errorText" style="color:red" runat="server">   
+            <div id="errorText" style="color:red" runat="server" class="validator">   
                 <%--<asp:RequiredFieldValidator 
                 ID = "userGuessRequiredValidator"
                 runat = "server" 
