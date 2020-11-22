@@ -75,6 +75,8 @@ namespace HiloGameASPNET
          *      void : void
          * RETURNS     :
          *      Statebag
+         * REFERENCE   : 
+         *      Clarke, S. (November 2020). MyFirstWebApp [Visual Studios Solution] from eConestoga
          */
         private StateBag PreviousPageViewState
         {
@@ -98,7 +100,7 @@ namespace HiloGameASPNET
          * PARAMETERS  :
          *      void : void
          * RETURNS     :
-         *      StateBag
+         *      void : void
          */
         protected void next_Click(object sender, EventArgs e)
         {
@@ -114,6 +116,8 @@ namespace HiloGameASPNET
          *      void : void
          * RETURNS     :
          *      StateBag
+         * REFERENCE   : 
+         *      Clarke, S. (November 2020). MyFirstWebApp [Visual Studios Solution] from eConestoga
          */
         public StateBag ReturnViewState()
         {

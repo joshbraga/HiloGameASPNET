@@ -54,6 +54,8 @@ namespace HiloGameASPNET
          *      void : void
          * RETURNS     :
          *      StateBag
+         * REFERENCE   : 
+         *      Clarke, S. (November 2020). MyFirstWebApp [Visual Studios Solution] from eConestoga
          */
         public StateBag ReturnViewState()
         {
