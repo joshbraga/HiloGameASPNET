@@ -47,7 +47,7 @@ DESCRIPTION   :
             </table>
 
             <!-- Validator to check if the user entered a name -->
-            <div id="nameError" style="color:red">
+            <div id="nameError" style="color:red" class = "validator">
                 <asp:RequiredFieldValidator ID="getPlayerNameValidator"
                         runat="server" ControlToValidate="getPlayerName"
                         ErrorMessage="Sorry this is a required field">
