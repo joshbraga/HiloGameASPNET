@@ -47,7 +47,7 @@ namespace HiloGameASPNET
             //Focus on the text box
             getUserGuess.Focus();
 
-            //If postback enter here
+            //If not postback enter here
             if (!IsPostBack)
             {
                 //If previous page isn't null then set viewstate
@@ -62,12 +62,13 @@ namespace HiloGameASPNET
                     ViewState[SharedValues.VIEWSTATE_MINGUESS] = minGuess;
                     ViewState[SharedValues.VIEWSTATE_MAXGUESS] = maxGuess;
 
+                    //generate random number between the range as target for player
                     Random r = new Random(DateTime.Now.Millisecond);
                     ViewState[SharedValues.VIEWSTATE_TARGETGUESS] = r.Next(minGuess, maxGuess);
 
                 }
             }
-            //If this is the first time loading this page enter here
+            //If this is a postback
             else
             {
                 //Set viewstate and min/max values
@@ -115,7 +116,7 @@ namespace HiloGameASPNET
          * PARAMETERS  :
          *      void: void
          * RETURNS     :
-         *      void : void
+         *      Boolean : true if user guesses correct number, false otherwise
          */
         private Boolean DetermineIfWon()
         {
